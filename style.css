@@ -8,10 +8,55 @@ html {
   font-size: 10px;
 }
 
+/*CONST WITHOUT OPEN*/
+
+.filter_bgc {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  z-index: 1;
+}
+
+.nice {
+  font-family: "Wild Youth", sans-serif;
+  color: #e4bb7a;
+  font-size: 2.8rem;
+}
+
+.title {
+  font-family: "montserrat";
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.3rem;
+  margin-bottom: 40px;
+}
+
+.button {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.6rem;
+  background-color: #e4bb7a;
+  border: none;
+  padding: 12px 35px;
+  margin-top: 50px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.button:hover {
+  color: white;
+}
+
+.menu_options ul.active {
+  left: 0;
+  width: 100%;
+}
+
+/**/
+
 header {
   background-color: #3f3f3f;
   height: 100vh;
-  margin-bottom: 40px;
 }
 
 .top_bar,
@@ -37,17 +82,10 @@ header {
   transition: 0.3s;
 }
 
-.filter_bgc {
-  background-color: rgba(0, 0, 0, 0.7);
-  height: 100vh;
-  z-index: 1;
-}
-
 .menu_list {
   position: absolute;
   top: 0;
   left: -100%;
-  width: 100%;
   height: 100%;
 }
 
@@ -122,6 +160,8 @@ header {
   top: 20px;
 }
 
+/* OPEN CLASS */
+
 .span_menu.open span:nth-child(1) {
   top: 10px;
   -webkit-transform: rotate(135deg);
@@ -143,52 +183,14 @@ header {
   transform: rotate(-135deg);
 }
 
-.welcome_banner {
-  text-align: center;
-}
-/**/
-.nice {
-  font-family: "Wild Youth", sans-serif;
-  color: #e4bb7a;
-  font-size: 2.8rem;
-}
-
-.title {
-  font-family: "montserrat";
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 2.3rem;
-  margin-bottom: 40px;
-}
-
-.button {
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1.6rem;
-  background-color: #e4bb7a;
-  border: none;
-  padding: 12px 35px;
-  margin-top: 50px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.button:hover {
-  color: white;
-}
-
-.active {
-  left: 0;
-}
-
 /**/
 
 .welcome_banner {
   position: relative;
-  top: 60%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 .welcome_text h1 {
   font-family: "Average", sans-serif;
@@ -206,14 +208,17 @@ header {
   padding: 30px 0 30px 0;
 }
 
+.bell {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .fa-bell {
-  display: block;
-  width: 20px;
-  height: 20px;
-  font-size: 2.5rem;
-  margin: 80px auto;
-  color: #e4bb7a;
   transform-origin: center top;
+  font-size: 2.5rem;
+  color: #e4bb7a;
 }
 
 .fa-bell:hover {
@@ -268,21 +273,21 @@ header {
   font-family: "montserrat";
   letter-spacing: 1px;
   font-weight: bold;
-  margin-top: 20px;
+  padding-top: 20px;
   font-size: 2.5rem;
 }
 
 .box_menu p:nth-of-type(2) {
   font-family: "Average";
   font-size: 1.2rem;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
   color: #e4bb7a;
 }
 
 .box_menu p:nth-of-type(3) {
   font-family: "Average";
   font-size: 1.6rem;
-  margin-bottom: 20px;
+  padding: 20px;
   line-height: 140%;
 }
 
@@ -390,19 +395,19 @@ header {
 }
 
 .fa-hospital-symbol {
-  top: 20%;
+  top: 15%;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .fa-coffee {
-  top: 50%;
+  top: 45%;
   left: 4%;
   transform: translateY(-50%);
 }
 
 .fa-utensils {
-  top: 50%;
+  top: 45%;
   right: 4%;
   transform: translateY(-50%);
 }
@@ -433,11 +438,9 @@ header {
 }
 
 .square_box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: 40px;
 }
+
 .square_box span {
   display: inline-block;
   width: 10px;
@@ -449,12 +452,6 @@ header {
 
 .square_box span.active {
   background-color: #e4bb7a;
-}
-
-#opinion,
-#name,
-#profession {
-  transition: 0.3s;
 }
 
 .subscribe {
@@ -473,8 +470,362 @@ header {
 }
 
 .subscribe form button {
-  padding: 12px 25px;
+  padding: 11px 10px;
   margin-top: 0;
+}
+
+@media screen and (min-width: 375px) {
+  /*CONST WITHOUT OPEN*/
+
+  .nice {
+    font-size: 3rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .button {
+    font-size: 1.8rem;
+    padding: 12px 35px;
+    margin-top: 70px;
+  }
+
+  .white {
+    color: white;
+  }
+
+  /**/
+
+  .menu_list li p {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+
+  .welcome_text h1 {
+    font-size: 3.3rem;
+  }
+
+  .welcome_text p {
+    font-size: 1rem;
+  }
+
+  .fa-bell {
+    font-size: 3rem;
+  }
+
+  .our_history p:nth-of-type(2) {
+    font-size: 1.8rem;
+  }
+
+  .farm_text p {
+    font-size: 1.8rem;
+  }
+
+  .box_menu p:nth-of-type(1) {
+    font-size: 2.7rem;
+  }
+
+  .box_menu p:nth-of-type(2) {
+    font-size: 1.4rem;
+  }
+
+  .box_menu p:nth-of-type(3) {
+    font-size: 1.8rem;
+    padding-bottom: 40px;
+  }
+
+  .box_menu p:nth-of-type(4) {
+    font-size: 2.7rem;
+    margin: 0 4% 60px 4%;
+  }
+
+  #none_border {
+    margin-bottom: 60px;
+  }
+
+  .staff_img img {
+    width: 60%;
+  }
+
+  .staff_box p:nth-of-type(1) {
+    font-size: 1.8rem;
+  }
+
+  .staff_box p:nth-of-type(2) {
+    font-size: 1.6rem;
+  }
+
+  .staff_box p:nth-last-of-type(1) {
+    font-size: 1.8rem;
+    padding: 0 4%;
+  }
+
+  .fa-eye,
+  .fa-share,
+  .fa-address-book {
+    font-size: 1.5rem;
+  }
+
+  .reservation p:nth-of-type(2) {
+    font-size: 1.8rem;
+  }
+
+  .fa-hospital-symbol,
+  .fa-coffee,
+  .fa-utensils {
+    font-size: 1.8rem;
+  }
+
+  #opinion {
+    height: 230px;
+    font-size: 1.7rem;
+  }
+
+  #name {
+    font-size: 2rem;
+  }
+
+  #profession {
+    font-size: 1.4rem;
+  }
+
+  .square_box {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /*CONST WITHOUT OPEN*/
+
+  .nice {
+    font-size: 5rem;
+  }
+
+  .title {
+    font-size: 4rem;
+  }
+
+  .button {
+    font-size: 2.5rem;
+    padding: 20px 80px;
+    margin-top: 70px;
+  }
+
+  /**/
+
+  .menu_list li p {
+    font-size: 2.6rem;
+    letter-spacing: 3px;
+  }
+
+  .menu_options {
+    padding-top: 9%;
+  }
+
+  .span_menu {
+    width: 50px;
+    height: 45px;
+  }
+
+  .span_menu span {
+    height: 6px;
+  }
+
+  .span_menu span:nth-child(1) {
+    top: 0px;
+  }
+
+  .span_menu span:nth-child(2) {
+    top: 15px;
+  }
+
+  .span_menu span:nth-child(3) {
+    top: 30px;
+  }
+
+  .welcome_text h1 {
+    font-size: 6rem;
+  }
+
+  .welcome_text p {
+    font-size: 1.5rem;
+  }
+
+  .arrow {
+    padding: 50px 0 80px 0;
+  }
+
+  .fa-bell {
+    font-size: 4rem;
+  }
+
+  .our_history p:nth-of-type(2) {
+    font-size: 2rem;
+    padding-right: 20%;
+  }
+
+  .farm_text p {
+    font-size: 2.5rem;
+  }
+
+  .dishes {
+    margin: 40px 0;
+  }
+
+  .our_dishes {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+
+  .box_menu {
+    padding-bottom: 40px;
+  }
+
+  .box_menu {
+    width: 50%;
+  }
+
+  .box_menu p:nth-of-type(1) {
+    font-size: 3rem;
+  }
+
+  .box_menu p:nth-of-type(2) {
+    font-size: 1.5rem;
+  }
+
+  .box_menu p:nth-of-type(3) {
+    font-family: "Average";
+    font-size: 1.6rem;
+    padding: 20px 20px 80px 20px;
+    line-height: 140%;
+  }
+
+  .box_menu p:nth-of-type(4) {
+    font-size: 3rem;
+    padding-bottom: 0;
+    margin: 0;
+    border: 0;
+  }
+
+  #none_border {
+    margin-bottom: 0;
+  }
+
+  .staff {
+    padding: 80px 0;
+  }
+
+  .white {
+    margin-bottom: 100px;
+  }
+
+  .staff_boxes {
+    display: flex;
+    align-items: baseline;
+    justify-content: baseline;
+  }
+
+  .staff_img {
+    margin: 60px 0 20px 0;
+  }
+
+  .staff_img img {
+    width: 60%;
+  }
+
+  .staff_box p:nth-of-type(1) {
+    letter-spacing: 1px;
+  }
+
+  .fa-eye,
+  .fa-share,
+  .fa-address-book {
+    font-size: 1.4rem;
+  }
+
+  .reservation {
+    padding: 80px 0;
+  }
+
+  .reservation p:nth-of-type(2) {
+    font-size: 2.2rem;
+    padding: 20px 4% 0 4%;
+  }
+
+  .reviews {
+    padding: 80px 0 80px 0;
+  }
+
+  .fa-hospital-symbol,
+  .fa-coffee,
+  .fa-utensils {
+    font-size: 2.5rem;
+  }
+  .fa-hospital-symbol {
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .fa-coffee {
+    top: 45%;
+    left: 4%;
+    transform: translateY(-50%);
+  }
+
+  .fa-utensils {
+    top: 45%;
+    right: 4%;
+    transform: translateY(-50%);
+  }
+
+  #opinion {
+    height: 250px;
+    padding: 80px 15% 0px 15%;
+    font-size: 2rem;
+  }
+
+  #name {
+    font-size: 2.5rem;
+  }
+
+  #profession {
+    font-size: 1.6rem;
+  }
+
+  .square_box span {
+    width: 15px;
+    height: 15px;
+  }
+
+  .square_box span.active {
+    background-color: #e4bb7a;
+  }
+
+  .subscribe {
+    padding: 80px 0;
+  }
+
+  .subscribe p:nth-child(1) {
+    margin-bottom: 80px;
+    padding: 0 10%;
+  }
+
+  .subscribe form input {
+    padding: 20px 10px;
+    width: 400px;
+    font-size: 2.4rem;
+  }
+
+  .subscribe form input::placeholder {
+    font-size: 2.4rem;
+  }
+
+  .subscribe form button {
+    padding: 21px 25px;
+  }
 }
 
 @-webkit-keyframes ring {
