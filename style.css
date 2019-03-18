@@ -82,13 +82,6 @@ header {
   transition: 0.3s;
 }
 
-.menu_list {
-  position: absolute;
-  top: 0;
-  left: -100%;
-  height: 100%;
-}
-
 .menu_list li {
   position: relative;
   height: calc(100vh / 6);
@@ -825,6 +818,427 @@ header {
 
   .subscribe form button {
     padding: 21px 25px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nice {
+    font-family: "Wild Youth", sans-serif;
+    color: #e4bb7a;
+    font-size: 5rem;
+    font-weight: normal;
+  }
+
+  .title {
+    font-family: "montserrat";
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 3.6rem;
+    margin-bottom: 40px;
+  }
+
+  .button {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.6rem;
+    background-color: #e4bb7a;
+    border: none;
+    padding: 12px 35px;
+    margin-top: 0;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .button:hover {
+    color: white;
+  }
+
+  .menu_options ul.active {
+    left: 0;
+    width: 100%;
+  }
+
+  /**/
+
+  .span_menu {
+    display: none;
+  }
+
+  .top_bar,
+  .logo {
+    display: block;
+  }
+
+  .top_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 5px 15%;
+    background-color: #e4bb7a;
+  }
+
+  .icons_top_bar {
+    font-size: 1.2rem;
+  }
+
+  .adress {
+    font-size: 1.2rem;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-content: baseline;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 15px 15%;
+  }
+
+  .menu_options {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: static;
+    width: auto;
+    height: auto;
+    padding-top: 0;
+  }
+
+  .menu_list {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    position: static;
+    list-style-type: none;
+  }
+
+  .menu_list li {
+    position: static;
+    margin-left: 3%;
+    cursor: pointer;
+    height: auto;
+  }
+
+  .menu_list li p {
+    position: static;
+    display: inline;
+    transform: translate(0);
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    transition: 0.3s;
+  }
+
+  .menu_list li:hover {
+    background-color: transparent;
+  }
+
+  .menu_list p:hover {
+    color: #e4bb7a;
+  }
+  .welcome_banner {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .welcome_text h1 {
+    font-family: "Average", sans-serif;
+    color: white;
+    font-size: 7.6rem;
+    font-weight: normal;
+  }
+
+  .welcome_text p {
+    font-family: "Average", sans-serif;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: normal;
+  }
+
+  .arrow {
+    padding: 43px 0 30px 0;
+  }
+
+  .bell {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .fa-bell {
+    transform-origin: center top;
+    font-size: 2.5rem;
+    color: #e4bb7a;
+  }
+
+  .fa-bell:hover {
+    -webkit-animation: ring 5s 0.1s ease-in-out infinite;
+    -moz-animation: ring 5s 0.1s ease-in-out infinite;
+    animation: ring 5s 0.1s ease-in-out infinite;
+    cursor: pointer;
+  }
+
+  .our_history {
+    margin: 40px 15% 40px 15%;
+    background-color: #fff;
+  }
+
+  .our_history p:nth-of-type(2) {
+    font-family: "Average";
+    font-size: 1.6rem;
+    line-height: 160%;
+    padding: 0 55% 43px 0;
+  }
+
+  .farm_quoute {
+    height: 35vh;
+  }
+
+  .farm_text p {
+    font-size: 3.6rem;
+  }
+
+  .dishes {
+    margin: 40px 0;
+  }
+
+  .our_dishes {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .box_menu {
+    width: 49%;
+    position: relative;
+    border: 1px solid #e4bb7a;
+    margin-bottom: 2%;
+    padding-bottom: 40px;
+    text-align: left;
+    padding-left: 150px;
+  }
+
+  .chicken_img,
+  .whope_img,
+  .burger_img,
+  .bacon_img {
+    position: absolute;
+  }
+
+  .chicken_img,
+  .burger_img {
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  .whope_img,
+  .bacon_img {
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+
+  .chicken_img {
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  .box_menu p:nth-of-type(1) {
+    font-size: 3rem;
+  }
+
+  .box_menu p:nth-of-type(2) {
+    font-size: 1.5rem;
+  }
+
+  .box_menu p:nth-of-type(3) {
+    font-family: "Average";
+    font-size: 1.6rem;
+    padding: 20px 20px 50px 0px;
+    line-height: 140%;
+  }
+
+  .box_menu p:nth-of-type(4) {
+    font-size: 3rem;
+    padding-bottom: 0;
+    margin: 0;
+    border: 0;
+  }
+
+  .staff {
+    background-color: #292929;
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  .white {
+    color: white;
+    letter-spacing: 3px;
+    margin-bottom: 80px;
+  }
+
+  .staff_img {
+    margin: 60px 0 20px 0;
+  }
+
+  .staff_img img {
+    width: 50%;
+  }
+
+  .staff_box p:nth-of-type(1) {
+    font-family: "montserrat";
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  .staff_box p:nth-of-type(2) {
+    font-family: "Average";
+    font-size: 1.3rem;
+    color: #e4bb7a;
+  }
+
+  .staff_icons {
+    margin: 40px 0;
+  }
+
+  .staff_box p:nth-last-of-type(1) {
+    font-family: "average";
+    font-size: 1.6rem;
+    margin: 0 4%;
+    line-height: 130%;
+    color: white;
+  }
+
+  .fa-eye,
+  .fa-share,
+  .fa-address-book {
+    color: #e4bb7a;
+    padding-right: 2%;
+    font-size: 1.3rem;
+  }
+
+  .reservation {
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  .reservation p:nth-of-type(2) {
+    font-family: "average";
+    font-size: 1.6rem;
+    padding: 0 4%;
+    margin-bottom: 25px;
+    line-height: 130%;
+  }
+
+  .reviews {
+    position: relative;
+    background-color: #292929;
+    padding: 80px 0 40px 0;
+    text-align: center;
+  }
+
+  .fa-hospital-symbol,
+  .fa-coffee,
+  .fa-utensils {
+    display: block;
+    color: #e4bb7a;
+    position: absolute;
+    font-size: 1.6rem;
+  }
+
+  .fa-coffee,
+  .fa-utensils {
+    cursor: pointer;
+  }
+
+  .fa-hospital-symbol {
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .fa-coffee {
+    top: 45%;
+    left: 4%;
+    transform: translateY(-50%);
+  }
+
+  .fa-utensils {
+    top: 45%;
+    right: 4%;
+    transform: translateY(-50%);
+  }
+
+  #opinion {
+    height: 200px;
+    font-family: "average";
+    padding: 35px 15% 0 15%;
+    color: white;
+    line-height: 130%;
+    font-size: 1.5rem;
+  }
+
+  #name {
+    font-family: "montserrat";
+    letter-spacing: 2px;
+    color: white;
+    margin: 25px 0 10px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+  }
+
+  #profession {
+    color: #e4bb7a;
+    font-family: "Minion pro";
+    font-size: 1.2rem;
+  }
+
+  .square_box {
+    margin-top: 40px;
+  }
+
+  .square_box span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    border: 1px solid #e4bb7a;
+    background-color: transparent;
+  }
+
+  .square_box span.active {
+    background-color: #e4bb7a;
+  }
+
+  .subscribe {
+    background-color: #fff;
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  .subscribe form input {
+    padding: 11px 10px;
+  }
+
+  .subscribe form input::placeholder {
+    font-family: "average";
+    font-size: 1.6rem;
+  }
+
+  .subscribe form button {
+    padding: 11px 10px;
+    margin-top: 0;
   }
 }
 
