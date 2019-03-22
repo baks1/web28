@@ -38,12 +38,24 @@
             <span></span>
           </div>
           <ul class="menu_list">
-            <li><p>Home</p></li>
-            <li><p>Reservations</p></li>
-            <li><p>Menu</p></li>
-            <li><p>Blog</p></li>
-            <li><p>Features</p></li>
-            <li><p>Contact</p></li>
+            <li>
+              <p>Home</p>
+            </li>
+            <li>
+              <p><a href="#reservation">Reservations</a></p>
+            </li>
+            <li>
+              <p><a href="#menu">Menu</a></p>
+            </li>
+            <li>
+              <p>Blog</p>
+            </li>
+            <li>
+              <p>Features</p>
+            </li>
+            <li>
+              <p>Contact</p>
+            </li>
           </ul>
         </nav>
       </div>
@@ -59,7 +71,7 @@
         <button class="button">menu</button>
       </div>
       <div class="bell">
-        <i class="fas fa-bell"></i>
+        <a href="#bell"><i class="fas fa-bell"></i></a>
       </div>
     </header>
     <section class="our_history">
@@ -81,7 +93,7 @@
         <h2 class="nice">Orson Welles</h2>
       </div>
     </section>
-    <section class="dishes">
+    <section class="dishes" id="menu">
       <h2 class="nice">Our Dishes</h2>
       <p class="title">Menu</p>
       <div class="our_dishes">
@@ -93,9 +105,7 @@
           <p>Big and Meaty</p>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
-            officiis similique porro laborum consectetur est ipsa ipsum ad
-            corporis, velit voluptas omnis quisquam cum minus dolorem, dolores
-            dolor assumenda dolorum.
+            officiis similique porro laborum consectetur.
           </p>
           <p>$50.00</p>
         </div>
@@ -105,9 +115,7 @@
           <p>Big and Meaty</p>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
-            officiis similique porro laborum consectetur est ipsa ipsum ad
-            corporis, velit voluptas omnis quisquam cum minus dolorem, dolores
-            dolor assumenda dolorum.
+            officiis similique porro laborum consectetur..
           </p>
           <p>$45.50</p>
         </div>
@@ -119,9 +127,7 @@
           <p>Big and Meaty</p>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
-            officiis similique porro laborum consectetur est ipsa ipsum ad
-            corporis, velit voluptas omnis quisquam cum minus dolorem, dolores
-            dolor assumenda dolorum.
+            officiis similique porro laborum consectetur.
           </p>
           <p>$34.00</p>
         </div>
@@ -131,9 +137,7 @@
           <p>Big and Meaty</p>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
-            officiis similique porro laborum consectetur est ipsa ipsum ad
-            corporis, velit voluptas omnis quisquam cum minus dolorem, dolores
-            dolor assumenda dolorum.
+            officiis similique porro laborum consectetur.
           </p>
           <p id="none_border">$75.00</p>
         </div>
@@ -199,7 +203,7 @@
         </div>
       </div>
     </section>
-    <section class="reservation">
+    <section class="reservation" id="reservation">
       <h2 class="nice">Reservation</h2>
       <p class="title">book a table</p>
       <p>
@@ -224,11 +228,11 @@
       <div class="square_box">
         <span class="active"></span>
         <span></span>
-        <span></span>
+        <span></span>,
       </div>
       <i class="fas fa-utensils"></i>
     </section>
-    <section class="subscribe">
+    <section class="subscribe" id="bell">
       <p class="title">Subscribe to our newsletter</p>
       <form>
         <input type="email" placeholder="Email" />

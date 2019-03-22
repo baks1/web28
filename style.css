@@ -4,8 +4,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --elements_in_ul: 6;
+}
+
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 /*CONST WITHOUT OPEN*/
@@ -20,6 +25,7 @@ html {
   font-family: "Wild Youth", sans-serif;
   color: #e4bb7a;
   font-size: 2.8rem;
+  font-weight: normal;
 }
 
 .title {
@@ -77,14 +83,14 @@ header {
 .menu_list {
   position: absolute;
   list-style-type: none;
-  top: 10%;
+  top: 0;
   left: -100%;
   transition: 0.3s;
 }
 
 .menu_list li {
   position: relative;
-  height: calc(100vh / 6);
+  height: calc(100vh / (var(--elements_in_ul)));
   font-family: "Montreal", sans-serif;
   font-weight: bold;
   transition: 0.2s;
@@ -99,6 +105,11 @@ header {
   text-transform: uppercase;
   color: #fff;
   font-size: 1.6rem;
+}
+
+.menu_list li p a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .menu_list li:hover {
@@ -189,12 +200,14 @@ header {
   font-family: "Average", sans-serif;
   color: white;
   font-size: 3rem;
+  font-weight: normal;
 }
 
 .welcome_text p {
   font-family: "Average", sans-serif;
   color: white;
   font-size: 0.9rem;
+  font-weight: normal;
 }
 
 .arrow {
@@ -406,9 +419,10 @@ header {
 }
 
 #opinion {
+  display: block;
   height: 200px;
   font-family: "average";
-  padding: 35px 15% 0 15%;
+  padding: 45px 15% 0 15%;
   color: white;
   line-height: 130%;
   font-size: 1.5rem;
@@ -572,6 +586,7 @@ header {
 
   #opinion {
     height: 230px;
+    padding-top: 60px;
     font-size: 1.7rem;
   }
 
@@ -597,6 +612,7 @@ header {
 
   .title {
     font-size: 4rem;
+    margin-bottom: 60px;
   }
 
   .button {
@@ -653,17 +669,21 @@ header {
     font-size: 4rem;
   }
 
+  .our_history {
+    margin: 80px 4%;
+  }
+
   .our_history p:nth-of-type(2) {
     font-size: 2rem;
     padding-right: 20%;
   }
 
   .farm_text p {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .dishes {
-    margin: 40px 0;
+    margin: 80px 0;
   }
 
   .our_dishes {
@@ -673,11 +693,8 @@ header {
   }
 
   .box_menu {
-    padding-bottom: 40px;
-  }
-
-  .box_menu {
     width: 50%;
+    padding-bottom: 40px;
   }
 
   .box_menu p:nth-of-type(1) {
@@ -689,9 +706,8 @@ header {
   }
 
   .box_menu p:nth-of-type(3) {
-    font-family: "Average";
-    font-size: 1.6rem;
-    padding: 20px 20px 80px 20px;
+    font-size: 1.8rem;
+    padding: 20px 30px 80px 30px;
     line-height: 140%;
   }
 
@@ -711,7 +727,7 @@ header {
   }
 
   .white {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
 
   .staff_boxes {
@@ -725,11 +741,11 @@ header {
   }
 
   .staff_img img {
-    width: 60%;
+    width: 50%;
   }
 
   .staff_box p:nth-of-type(1) {
-    letter-spacing: 1px;
+    letter-spacing: 2px;
   }
 
   .fa-eye,
@@ -776,7 +792,7 @@ header {
 
   #opinion {
     height: 250px;
-    padding: 80px 15% 0px 15%;
+    padding: 120px 15% 0px 15%;
     font-size: 2rem;
   }
 
@@ -807,7 +823,7 @@ header {
   }
 
   .subscribe form input {
-    padding: 20px 10px;
+    padding: 21px 10px;
     width: 400px;
     font-size: 2.4rem;
   }
@@ -823,35 +839,18 @@ header {
 
 @media screen and (min-width: 1024px) {
   .nice {
-    font-family: "Wild Youth", sans-serif;
-    color: #e4bb7a;
-    font-size: 5rem;
-    font-weight: normal;
+    font-size: 4rem;
   }
 
   .title {
-    font-family: "montserrat";
-    text-transform: uppercase;
-    font-weight: bold;
     font-size: 3.6rem;
     margin-bottom: 40px;
   }
 
   .button {
-    font-family: "Montserrat", sans-serif;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1.6rem;
-    background-color: #e4bb7a;
-    border: none;
-    padding: 12px 35px;
+    font-size: 1.8rem;
+    padding: 12px 40px;
     margin-top: 0;
-    cursor: pointer;
-    transition: 0.2s;
-  }
-
-  .button:hover {
-    color: white;
   }
 
   .menu_options ul.active {
@@ -919,76 +918,54 @@ header {
     cursor: pointer;
     height: auto;
   }
+  .menu_list li p,
+  .menu_list li a {
+    transition: 0.3s;
+  }
 
   .menu_list li p {
     position: static;
     display: inline;
     transform: translate(0);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     letter-spacing: 1px;
-    transition: 0.3s;
   }
 
   .menu_list li:hover {
     background-color: transparent;
   }
 
-  .menu_list p:hover {
+  .menu_list p:hover,
+  .menu_list a:hover {
     color: #e4bb7a;
   }
-  .welcome_banner {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+
+  .menu-list li p a:hover {
+    color: black;
   }
+
+  .welcome_banner {
+    top: 45%;
+  }
+
   .welcome_text h1 {
-    font-family: "Average", sans-serif;
-    color: white;
-    font-size: 7.6rem;
-    font-weight: normal;
+    font-size: 7rem;
   }
 
   .welcome_text p {
-    font-family: "Average", sans-serif;
-    color: white;
-    font-size: 1.6rem;
-    font-weight: normal;
+    font-size: 1.4rem;
   }
 
   .arrow {
-    padding: 43px 0 30px 0;
-  }
-
-  .bell {
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .fa-bell {
-    transform-origin: center top;
-    font-size: 2.5rem;
-    color: #e4bb7a;
-  }
-
-  .fa-bell:hover {
-    -webkit-animation: ring 5s 0.1s ease-in-out infinite;
-    -moz-animation: ring 5s 0.1s ease-in-out infinite;
-    animation: ring 5s 0.1s ease-in-out infinite;
-    cursor: pointer;
+    padding: 43px 0 43px 0;
   }
 
   .our_history {
-    margin: 40px 15% 40px 15%;
-    background-color: #fff;
+    margin: 80px 15%;
   }
 
   .our_history p:nth-of-type(2) {
-    font-family: "Average";
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     line-height: 160%;
     padding: 0 55% 43px 0;
   }
@@ -998,30 +975,33 @@ header {
   }
 
   .farm_text p {
-    font-size: 3.6rem;
-  }
-
-  .dishes {
-    margin: 40px 0;
+    font-size: 2.5rem;
   }
 
   .our_dishes {
-    display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
   }
 
   .box_menu {
-    width: 49%;
     position: relative;
+    width: 48%;
     border: 1px solid #e4bb7a;
-    margin-bottom: 2%;
-    padding-bottom: 40px;
+    margin-bottom: 25px;
     text-align: left;
+  }
+
+  .our_dishes div.box_menu:nth-child(1),
+  .our_dishes div.box_menu:nth-child(3) {
     padding-left: 150px;
+    padding-right: 30px;
+  }
+
+  .our_dishes div.box_menu:nth-child(2),
+  .our_dishes div.box_menu:nth-child(4) {
+    padding-left: 30px;
+    padding-right: 150px;
   }
 
   .chicken_img,
@@ -1052,193 +1032,136 @@ header {
   }
 
   .box_menu p:nth-of-type(1) {
-    font-size: 3rem;
-  }
-
-  .box_menu p:nth-of-type(2) {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
   }
 
   .box_menu p:nth-of-type(3) {
-    font-family: "Average";
-    font-size: 1.6rem;
-    padding: 20px 20px 50px 0px;
-    line-height: 140%;
-  }
-
-  .box_menu p:nth-of-type(4) {
-    font-size: 3rem;
-    padding-bottom: 0;
-    margin: 0;
-    border: 0;
+    padding: 0px 0px 50px 0px;
   }
 
   .staff {
-    background-color: #292929;
-    text-align: center;
-    padding: 40px 0;
+    padding: 80px 8%;
   }
 
-  .white {
-    color: white;
-    letter-spacing: 3px;
-    margin-bottom: 80px;
-  }
-
-  .staff_img {
-    margin: 60px 0 20px 0;
-  }
-
-  .staff_img img {
-    width: 50%;
-  }
-
-  .staff_box p:nth-of-type(1) {
-    font-family: "montserrat";
-    font-weight: bold;
-    font-size: 1.6rem;
-    color: white;
-    text-transform: uppercase;
+  .staff_boxes {
+    display: flex;
+    align-items: baseline;
+    justify-content: baseline;
   }
 
   .staff_box p:nth-of-type(2) {
-    font-family: "Average";
-    font-size: 1.3rem;
-    color: #e4bb7a;
+    font-weight: normal;
+    font-size: 1.5rem;
+  }
+
+  .staff_box p:nth-last-of-type(1) {
+    font-size: 1.5rem;
+    padding: 0 20%;
   }
 
   .staff_icons {
     margin: 40px 0;
   }
 
-  .staff_box p:nth-last-of-type(1) {
-    font-family: "average";
-    font-size: 1.6rem;
-    margin: 0 4%;
-    line-height: 130%;
-    color: white;
-  }
-
-  .fa-eye,
-  .fa-share,
-  .fa-address-book {
-    color: #e4bb7a;
-    padding-right: 2%;
-    font-size: 1.3rem;
-  }
-
   .reservation {
-    padding: 40px 0;
-    text-align: center;
+    width: 45%;
+    margin: 0 auto;
   }
 
   .reservation p:nth-of-type(2) {
-    font-family: "average";
-    font-size: 1.6rem;
-    padding: 0 4%;
-    margin-bottom: 25px;
-    line-height: 130%;
-  }
-
-  .reviews {
-    position: relative;
-    background-color: #292929;
-    padding: 80px 0 40px 0;
-    text-align: center;
-  }
-
-  .fa-hospital-symbol,
-  .fa-coffee,
-  .fa-utensils {
-    display: block;
-    color: #e4bb7a;
-    position: absolute;
-    font-size: 1.6rem;
-  }
-
-  .fa-coffee,
-  .fa-utensils {
-    cursor: pointer;
+    font-size: 1.5rem;
+    margin-bottom: 35px;
+    line-height: 160%;
   }
 
   .fa-hospital-symbol {
     top: 15%;
-    left: 50%;
-    transform: translateX(-50%);
   }
 
   .fa-coffee {
-    top: 45%;
-    left: 4%;
-    transform: translateY(-50%);
+    left: 15%;
   }
 
   .fa-utensils {
-    top: 45%;
-    right: 4%;
-    transform: translateY(-50%);
+    right: 15%;
   }
 
   #opinion {
-    height: 200px;
-    font-family: "average";
-    padding: 35px 15% 0 15%;
-    color: white;
-    line-height: 130%;
+    padding: 110px 25% 0 25%;
+    line-height: 160%;
     font-size: 1.5rem;
   }
 
   #name {
-    font-family: "montserrat";
-    letter-spacing: 2px;
-    color: white;
-    margin: 25px 0 10px 0;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   #profession {
-    color: #e4bb7a;
-    font-family: "Minion pro";
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
-  .square_box {
-    margin-top: 40px;
-  }
-
-  .square_box span {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin-right: 5px;
-    border: 1px solid #e4bb7a;
-    background-color: transparent;
-  }
-
-  .square_box span.active {
-    background-color: #e4bb7a;
-  }
-
-  .subscribe {
-    background-color: #fff;
-    text-align: center;
-    padding: 40px 0;
+  .subscribe form {
+    display: flex;
+    justify-content: center;
   }
 
   .subscribe form input {
-    padding: 11px 10px;
-  }
-
-  .subscribe form input::placeholder {
-    font-family: "average";
-    font-size: 1.6rem;
+    padding: 9px 10px;
+    margin-right: 10px;
   }
 
   .subscribe form button {
-    padding: 11px 10px;
+    padding: 16px 10px 15px 10px;
     margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .menu_list li p {
+    font-size: 1.4rem;
+  }
+
+  .welcome_text h1 {
+    font-size: 7.6rem;
+  }
+
+  .welcome_text p {
+    font-size: 1.6rem;
+  }
+
+  .our_history p:nth-of-type(2) {
+    font-size: 1.6rem;
+  }
+
+  .farm_text p {
+    font-size: 3.6rem;
+  }
+
+  .our_dishes div.box_menu:nth-child(1),
+  .our_dishes div.box_menu:nth-child(3) {
+    padding-left: 135px;
+    padding-right: 25px;
+  }
+
+  .our_dishes div.box_menu:nth-child(2),
+  .our_dishes div.box_menu:nth-child(4) {
+    padding-left: 25px;
+    padding-right: 135px;
+  }
+
+  .box_menu p:nth-of-type(1) {
+    letter-spacing: 1px;
+  }
+
+  #opinion {
+    padding-top: 150px;
+    font-size: 1.6rem;
+  }
+
+  #name {
+    margin: 80px 0 10px 0;
+    font-size: 1.8rem;
   }
 }
 
